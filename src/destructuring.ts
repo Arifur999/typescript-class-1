@@ -20,7 +20,7 @@ const classFriends=["rohim","rafi","nafi"]
 
 const [,b,c]=classFriends //skip kora jay..
 
-
+//a,rohim,b te rafi,c te nafi
 
 // const myFriends=classFriends[2]
 
