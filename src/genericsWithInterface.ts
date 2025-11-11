@@ -1,4 +1,4 @@
-interface Developer <T>{
+interface Developer <T,V=null>{
     name:string;
     salary:number;
     device:{
@@ -7,13 +7,22 @@ interface Developer <T>{
         release:string
     };
     smartWatch:T;
+    bike?:V
+}
+
+interface LocalWatch{
+ heartbit:string;
+    stopwatch:boolean
+}
+
+interface BrandWatch{
+    heartbit:string;
+    stopwatch:boolean;
+    call:boolean
 }
 
 
-const poorDeveloper:Developer <{
-    heartbit:string;
-    stopwatch:boolean
-}>={
+const poorDeveloper:Developer <LocalWatch>={
     name:'x',
     salary:20000,
     device:{
@@ -26,11 +35,7 @@ release:'2028'
         stopwatch:true
     }
 }
-const richDeveloper:Developer <{
-    heartbit:string;
-    stopwatch:boolean;
-    call:boolean
-}>={
+const richDeveloper:Developer <BrandWatch>={
     name:'y',
     salary:60000,
     device:{
