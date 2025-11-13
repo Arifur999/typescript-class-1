@@ -40,4 +40,3 @@ const getPropertyFromObj=<X>(obj:X,key: keyof X)=>{
 
 const result=getPropertyFromObj(user,'id')
 
-console.log(object);
