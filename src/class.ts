@@ -1,16 +1,24 @@
 //oop class object
 
  class Animal{
-    name:string;
-    species:string;
-    sound:string
+    // public name:string;
+    // public species:string;
+    // public sound:string
 
 
-    constructor (name:string,species:string,sound:string){
+    constructor (public name:string,public species:string,public sound:string){    //public diye atake global kora jay
         this.name=name
         this.species=species
         this.sound=sound
     }
+
+//method
+
+makeSound(){
+    console.log(`${this.name} is making sound ${this.sound}`);
+}
+
+
  }
 
 
