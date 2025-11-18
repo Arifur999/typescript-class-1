@@ -23,6 +23,6 @@ callHiddenMethod(balance:number){
 
 const myAccount =new BankAccount(111,"arif",8880);
 
-myAccount.addBalance(100)
+// myAccount.addBalance(100)
 
 console.log(myAccount);
