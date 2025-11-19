@@ -20,3 +20,17 @@ function combine(a: number | string, b: number | string): string | number {
 console.log(combine(5, 10));        // 15
 console.log(combine("Hi ", "There"));  // Hi There
 console.log(combine(5, "Hello"));     // Error
+
+
+
+// Problem 2: Array থেকে শুধু ইউনিক ভ্যালু বের করে আনা
+// Problem
+
+// একটা function লিখবে যেটা number/string এর array নেবে এবং ডুপ্লিকেট ছাড়া ইউনিক লিস্ট return করবে।
+
+function getUnique(values: (string | number)[]): (string | number)[] {
+  return [...new Set(values)];
+}
+
+console.log(getUnique([1, 2, 2, 3, 4, 4]));     // [1, 2, 3, 4]
+console.log(getUnique(["a", "b", "a"]));       // ["a", "b"]
