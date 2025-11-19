@@ -34,3 +34,21 @@ function getUnique(values: (string | number)[]): (string | number)[] {
 
 console.log(getUnique([1, 2, 2, 3, 4, 4]));     // [1, 2, 3, 4]
 console.log(getUnique(["a", "b", "a"]));       // ["a", "b"]
+
+// Problem 3: Interface ব্যবহার করে Person এর details দেখানো
+// Problem
+
+// Person নামে একটি interface বানাবে যেটায় name, age, email থাকবে।
+// একটা function লিখবে যেটা Person type এর object নিয়ে details return করবে।
+
+interface Person {
+  name: string;
+  age: number;
+  email: string;
+}
+
+function showPerson(p: Person): string {
+  return `Name: ${p.name}, Age: ${p.age}, Email: ${p.email}`;
+}
+
+console.log(showPerson({ name: "Arif", age: 22, email: "arif@mail.com" }));
