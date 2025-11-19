@@ -137,39 +137,39 @@ printBookDetails(myBook);
 
 
 
-function getUniqueValues(arr1: (string | number)[], arr2: (string | number)[]): (string | number)[] {
-  const result: (string | number)[] = [];
+// function getUniqueValues(arr1: (string | number)[], arr2: (string | number)[]): (string | number)[] {
+//   const result: (string | number)[] = [];
 
-  function exists(value: string | number, array: (string | number)[]): boolean {
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] === value) {
-        return true;
-      }
-    }
-    return false;
-  }
+//   function exists(value: string | number, array: (string | number)[]): boolean {
+//     for (let i = 0; i < array.length; i++) {
+//       if (array[i] === value) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   }
 
 
-  for (let i = 0; i < arr1.length; i++) {
-    if (!exists(arr1[i], result)) {
-      result[result.length] = arr1[i]; 
-    }
-  }
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (!exists(arr1[i], result)) {
+//       result[result.length] = arr1[i]; 
+//     }
+//   }
 
-  for (let i = 0; i < arr2.length; i++) {
-    if (!exists(arr2[i], result)) {
-      result[result.length] = arr2[i];
-    }
-  }
+//   for (let i = 0; i < arr2.length; i++) {
+//     if (!exists(arr2[i], result)) {
+//       result[result.length] = arr2[i];
+//     }
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
 
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
 
-console.log(getUniqueValues(array1, array2));
+// console.log(getUniqueValues(array1, array2));
 
 
 
