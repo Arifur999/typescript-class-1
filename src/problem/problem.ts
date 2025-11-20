@@ -52,3 +52,20 @@ function showPerson(p: Person): string {
 }
 
 console.log(showPerson({ name: "Arif", age: 22, email: "arif@mail.com" }));
+
+
+
+// Problem 4: Optional Parameter ব্যবহার
+// Problem
+
+// একটা function লিখো যা name নেবে এবং age optional থাকবে। Age দিলে age দেখাবে, না দিলে শুধু name return করবে।
+
+function showInfo(name: string, age?: number): string {
+  if (age) {
+    return `${name} is ${age} years old`;
+  }
+  return `Name: ${name}`;
+}
+
+console.log(showInfo("Arif", 25)); 
+console.log(showInfo("Arif"));
