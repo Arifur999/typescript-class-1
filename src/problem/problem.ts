@@ -105,3 +105,22 @@ function getStatusMessage(status: Status): string {
 
 console.log(getStatusMessage("success"));
 console.log(getStatusMessage("loading"));
+
+
+
+// Problem 7: Class তৈরি করে Method ব্যবহার
+// Problem
+
+// Car নামে একটা class বানাবে যার brand এবং model থাকবে।
+// একটা method থাকবে getFullName() → “Toyota Corolla”
+
+class Car {
+  constructor(public brand: string, public model: string) {}
+
+  getFullName(): string {
+    return `${this.brand} ${this.model}`;
+  }
+}
+
+const myCar = new Car("Toyota", "Corolla");
+console.log(myCar.getFullName());
