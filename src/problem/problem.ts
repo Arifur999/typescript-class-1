@@ -69,3 +69,16 @@ function showInfo(name: string, age?: number): string {
 
 console.log(showInfo("Arif", 25)); 
 console.log(showInfo("Arif"));
+
+
+// Problem 5: Tuple ব্যবহার করে coordinates return করা
+// Problem
+
+// একটি function বানাবে যা দুইটা number ইনপুট নেবে এবং [x, y] টুপল return করবে।
+
+
+function getCoordinates(x: number, y: number): [number, number] {
+  return [x, y];
+}
+
+console.log(getCoordinates(10, 20));
