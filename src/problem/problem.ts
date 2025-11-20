@@ -82,3 +82,26 @@ function getCoordinates(x: number, y: number): [number, number] {
 }
 
 console.log(getCoordinates(10, 20));
+
+// Problem 6: Union Type দিয়ে Status handle করা
+// Problem
+
+// Status type = "success" | "error" | "loading"
+// একটা function লিখো যা status অনুযায়ী message return করবে।
+
+
+type Status = "success" | "error" | "loading";
+
+function getStatusMessage(status: Status): string {
+  switch (status) {
+    case "success":
+      return "Operation successful!";
+    case "error":
+      return "Something went wrong!";
+    case "loading":
+      return "Loading...";
+  }
+}
+
+console.log(getStatusMessage("success"));
+console.log(getStatusMessage("loading"));
