@@ -124,3 +124,28 @@ class Car {
 
 const myCar = new Car("Toyota", "Corolla");
 console.log(myCar.getFullName());
+
+
+
+// Problem 8: Array of Objects filter করা (Type সহ)
+// Problem
+
+// Products array থাকবে, প্রতিটায় name ও price থাকবে।
+// একটা function লিখবে যেটা price > 100 এমন product গুলো return করবে।
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function filterExpensive(products: Product[]): Product[] {
+  return products.filter(p => p.price > 100);
+}
+
+const items: Product[] = [
+  { name: "Pen", price: 20 },
+  { name: "Bag", price: 150 },
+  { name: "Shoes", price: 300 },
+];
+
+console.log(filterExpensive(items));
