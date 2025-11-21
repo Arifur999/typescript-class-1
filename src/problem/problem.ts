@@ -149,3 +149,18 @@ const items: Product[] = [
 ];
 
 console.log(filterExpensive(items));
+
+
+
+// Problem 9: Function এ Generic ব্যবহার
+// Problem
+
+// একটা generic function লিখবে যা যেকোনো টাইপের value কে array হিসেবে return করবে।
+
+function toArray<T>(value: T): T[] {
+  return [value];
+}
+
+console.log(toArray(10));        // [10]
+console.log(toArray("Hello"));   // ["Hello"]
+console.log(toArray(true));      // [true]
