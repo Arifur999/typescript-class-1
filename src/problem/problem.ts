@@ -196,3 +196,23 @@ function doubleAll(nums: number[]): number[] {
 }
 
 console.log(doubleAll([1, 2, 3, 4])); // [2, 4, 6, 8]
+
+
+
+// Problem 12: Narrowing ব্যবহার — number নাকি string বোঝা
+// Problem
+
+// একটা function লিখবে value নেবে।
+// value যদি number হয় → square return করবে
+// string হলে → uppercase return করবে।
+
+function processValue(v: number | string): number | string {
+  if (typeof v === "number") {
+    return v * v;
+  }
+  return v.toUpperCase();
+}
+
+console.log(processValue(5));      // 25
+console.log(processValue("hello")); // HELLO
+
