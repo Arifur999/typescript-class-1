@@ -184,3 +184,15 @@ const u: User = { id: 1, name: "Arif" };
 
 u.name = "Rakib"; // ✔ OK
 console.log(u);
+
+
+// Problem 11: Array Map ব্যবহার করে সব number কে double করা
+// Problem
+
+// একটি function লিখবে যা number array নেবে এবং প্রতিটি number এর double return করবে।
+
+function doubleAll(nums: number[]): number[] {
+  return nums.map(n => n * 2);
+}
+
+console.log(doubleAll([1, 2, 3, 4])); // [2, 4, 6, 8]
