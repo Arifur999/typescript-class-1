@@ -164,3 +164,23 @@ function toArray<T>(value: T): T[] {
 console.log(toArray(10));        // [10]
 console.log(toArray("Hello"));   // ["Hello"]
 console.log(toArray(true));      // [true]
+
+
+
+// Problem 10: Readonly Property ব্যবহার
+// Problem
+
+// একটি interface বানাবে যেখানে id readonly থাকবে। পরে id পরিবর্তন করলে error দেখবে।
+
+
+interface User {
+  readonly id: number;
+  name: string;
+}
+
+const u: User = { id: 1, name: "Arif" };
+
+// u.id = 5; // ❌ Error: Cannot assign to 'id'
+
+u.name = "Rakib"; // ✔ OK
+console.log(u);
