@@ -216,3 +216,16 @@ function processValue(v: number | string): number | string {
 console.log(processValue(5));      // 25
 console.log(processValue("hello")); // HELLO
 
+// Problem 13: Object এর key গুলো return করা (keyof ব্যবহার)
+// Problem
+
+// একটি function লিখবে যা object নেবে এবং keyof ব্যবহার করে সব key return করবে।
+
+
+function getKeys<T extends object>(obj: T): (keyof T)[] {
+  return Object.keys(obj) as (keyof T)[];
+}
+
+const person = { name: "Arif", age: 22, city: "Dhaka" };
+
+console.log(getKeys(person)); // ["name", "age", "city"]
