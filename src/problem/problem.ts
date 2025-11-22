@@ -258,3 +258,27 @@ function waitTask(): Promise<string> {
 }
 
 waitTask().then(msg => console.log(msg));
+
+
+
+// Problem 16: Enum ব্যবহার করে সপ্তাহের দিন handle করা
+// Problem
+
+// Days enum বানাবে এবং একটি function লিখবে যা আজকে কোন দিন সেটা return করবে।
+
+
+enum Days {
+  Sat = "Saturday",
+  Sun = "Sunday",
+  Mon = "Monday",
+  Tue = "Tuesday",
+  Wed = "Wednesday",
+  Thu = "Thursday",
+  Fri = "Friday"
+}
+
+function today(day: Days): string {
+  return `Today is ${day}`;
+}
+
+console.log(today(Days.Mon));
