@@ -298,3 +298,14 @@ function getLength(value: unknown): number {
 console.log(getLength("Hello")); // 5
 
 
+// Problem 18: Array Reduce দিয়ে sum বের করা
+// Problem
+
+// একটি function লিখবে যা reduce ব্যবহার করে number array এর sum return করবে।
+
+
+function getSum(nums: number[]): number {
+  return nums.reduce((total, num) => total + num, 0);
+}
+
+console.log(getSum([10, 20, 30])); // 
