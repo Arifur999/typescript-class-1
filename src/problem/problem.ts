@@ -309,3 +309,19 @@ function getSum(nums: number[]): number {
 }
 
 console.log(getSum([10, 20, 30])); // 
+
+
+// Problem 19: Record type ব্যবহার
+// Problem
+
+// একটি object বানাবে যেখানে key থাকবে string টাইপ এবং value হবে number।
+// Record ব্যবহার করতে হবে।
+
+const scores: Record<string, number> = {
+  arif: 85,
+  rakib: 92,
+  nayan: 76,
+};
+
+console.log(scores);
+
