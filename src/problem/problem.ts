@@ -282,3 +282,19 @@ function today(day: Days): string {
 }
 
 console.log(today(Days.Mon));
+
+
+
+// Problem 17: Type Assertion ব্যবহার
+// Problem
+
+// একটা unknown টাইপের value নেবে, তারপর assert করে string বানিয়ে length return করবে।
+
+
+function getLength(value: unknown): number {
+  return (value as string).length;
+}
+
+console.log(getLength("Hello")); // 5
+
+
