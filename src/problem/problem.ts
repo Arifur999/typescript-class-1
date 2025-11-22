@@ -246,3 +246,15 @@ console.log(calculatePrice(100));     // 110
 console.log(calculatePrice(100, 0.2)); // 120
 
 
+// Problem 15: Promise Returning Function
+// Problem
+
+// একটা function লিখবে যা 2 সেকন্ড পরে "Done!" resolve করবে।
+
+function waitTask(): Promise<string> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Done!"), 2000);
+  });
+}
+
+waitTask().then(msg => console.log(msg));
