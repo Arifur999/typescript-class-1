@@ -229,3 +229,20 @@ function getKeys<T extends object>(obj: T): (keyof T)[] {
 const person = { name: "Arif", age: 22, city: "Dhaka" };
 
 console.log(getKeys(person)); // ["name", "age", "city"]
+
+
+
+// Problem 14: Default Parameter ব্যবহার
+// Problem
+
+// একটা function লিখবে যা price নেবে এবং default tax = 10% থাকবে।
+// Final price return করবে।
+
+function calculatePrice(price: number, tax: number = 0.1): number {
+  return price + price * tax;
+}
+
+console.log(calculatePrice(100));     // 110
+console.log(calculatePrice(100, 0.2)); // 120
+
+
