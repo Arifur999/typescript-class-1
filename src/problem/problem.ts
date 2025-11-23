@@ -377,3 +377,29 @@ const obj: AB = {
 };
 
 console.log(obj);
+
+
+
+// Problem 23: keyof দিয়ে value access করা
+// Problem
+
+// একটা function তৈরি করো যা object ও তার key নেবে এবং সেই key এর মান return করবে।
+
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const person = { name: "Arif", age: 22 };
+console.log(getValue(person, "name")); // Arif
+console.log(getValue(person, "age"));  // 22
+
+
+// Problem 24: Readonly Array তৈরি করা
+// Problem
+
+// একটা readonly number array বানাবে যাতে আর কোনো value push করা যাবে না।
+
+const nums: ReadonlyArray<number> = [1, 2, 3];
+
+// nums.push(4); // ❌ Error
+console.log(nums);
