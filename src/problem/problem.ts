@@ -353,3 +353,27 @@ function throwError(message: string): never {
 
 // throwError("Something went wrong!");
 
+
+
+
+// Problem 22: Intersection Type ব্যবহার
+// Problem
+
+// দুইটি interface merge করে একটি object তৈরি করবে।
+
+interface A {
+  a: string;
+}
+
+interface B {
+  b: number;
+}
+
+type AB = A & B;
+
+const obj: AB = {
+  a: "Hello",
+  b: 123,
+};
+
+console.log(obj);
