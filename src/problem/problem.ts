@@ -340,3 +340,16 @@ const scores: Record<string, number> = {
 
 console.log(scores);
 
+
+
+// Problem 21: Never টাইপ—Error throw করা function
+// Problem
+
+// একটা function তৈরি করো যেটা সবসময় error throw করবে, return type never হবে।
+
+function throwError(message: string): never {
+  throw new Error(message);
+}
+
+// throwError("Something went wrong!");
+
