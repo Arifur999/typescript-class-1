@@ -420,3 +420,23 @@ const box1: Box<number> = { data: 100 };
 const box2: Box<string> = { data: "Hello" };
 
 console.log(box1, box2);
+
+
+// Problem 27: Optional Chaining ব্যবহার
+// Problem
+
+// একটা nested object থাকবে। এমন function লিখবে যা নিরাপদে user.address.city return করবে।
+
+const user = {
+  name: "Arif",
+  address: {
+    city: "Dhaka",
+  }
+};
+
+function getCity(u: any): string | undefined {
+  return u?.address?.city;
+}
+
+console.log(getCity(user));     // Dhaka
+console.log(getCity({}));       // undefined
