@@ -403,3 +403,20 @@ const nums: ReadonlyArray<number> = [1, 2, 3];
 
 // nums.push(4); // ❌ Error
 console.log(nums);
+
+
+
+// Problem 26: Generic Interface ব্যবহার
+// Problem
+
+// একটা Box<T> interface বানাবে যেখানে data: T থাকবে।
+// তারপর দুইটা Box তৈরি করবে: একটা number, একটা string দিয়ে।
+
+interface Box<T> {
+  data: T;
+}
+
+const box1: Box<number> = { data: 100 };
+const box2: Box<string> = { data: "Hello" };
+
+console.log(box1, box2);
